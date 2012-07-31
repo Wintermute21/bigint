@@ -1,0 +1,38 @@
+#ifndef bigint_h
+#define bigint_h
+#include <iostream>
+#include <vector>
+#include <istream>
+#include <iostream>
+#include <string>
+using std::string;
+using std::ostream;
+using std::istream;
+using std::vector;
+class BigInt {
+public:
+    BigInt();
+    BigInt(vector<int>);
+    BigInt(int);
+    BigInt(const string);
+    bool operator==(const BigInt&);
+    bool operator==(int);
+    bool operator==(vector<int>);
+    BigInt& operator++();
+    BigInt operator++(int);
+    BigInt& operator+=(const BigInt&);
+    void times_10(int);
+    void times_single_digit(const int);
+    BigInt operator*(const BigInt&);
+    int operator[](const int);
+    friend ostream& operator<<(ostream&, const BigInt&);
+    friend istream& operator>>(istream&, BigInt&);
+    BigInt operator+(const BigInt&);
+    string to_string  ();
+
+private:
+    vector<int> digits;
+    void zero ();
+
+};
+#endif // bigint_h__

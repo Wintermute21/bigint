@@ -1,0 +1,45 @@
+#include "bigint.h"
+#include <vector>
+#include <iostream>
+#include <string>
+#include <sstream>
+using std::stringstream;
+using std::vector;
+using std::string;
+
+BigInt::BigInt() {
+    vector<int> v;
+    for (int i = 0; i <  v.max_size  (); ++i) {
+        digits[i] = 0;
+        v.push_back  (i);
+    }
+}
+
+BigInt::BigInt(int x) {
+    BigInt();
+    for (int i = 0; x != 0; ++i) {
+        digits[i] = x % 10;
+        x /= 10;
+        digits.push_back  (x);
+    }
+}
+
+BigInt::BigInt(string str) {
+    int idx=0;
+    for (int i =0; i<str.size  (); ++i)
+    {
+        int digit = static_cast<int>(str[idx] - '0');
+    }
+    
+}
+
+string BigInt::to_string  () {
+    string str;
+    int idx;
+    for(int i =0; i<digits.size  (); ++i) {
+        int digit = static_cast<int>(str[idx] + '0');
+        return str;
+
+    }
+
+}
