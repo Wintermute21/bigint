@@ -122,6 +122,8 @@ ostream& operator<< (ostream& out,BigInt& num) {
 
 void BigInt::times_10(int x)
 {
+	if (x>0) {
+	int last_digit = digits[digits.size()-1];
     for (int i = (digits.size  () - 1); i >= 0 ; --i) {
         digits[i] = digits[i - x];
     }
@@ -129,6 +131,9 @@ void BigInt::times_10(int x)
     for (int i = (x - 1); i >= 0; --i) {
         digits[i] = 0;
     }
+	digits.push_back(last_digit);
+	}
+	else return;
 }
 
 void BigInt::times_single_digit(const int x)
