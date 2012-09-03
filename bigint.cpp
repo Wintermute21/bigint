@@ -106,9 +106,13 @@ BigInt BigInt::operator+(const BigInt& tmp) const {
 	return BigInt(result);
 }
 
-int BigInt::operator[](int idx)
+int BigInt::operator[](int idx) const
 {
     return digits[idx];
+}
+
+int& BigInt::operator[](int idx) {
+return digits[idx];
 }
 
 istream& operator>>(istream& in, BigInt& num)

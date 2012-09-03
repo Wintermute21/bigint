@@ -27,7 +27,8 @@ public:
 	BigInt times_10(int);
 	void times_single_digit(const int);
 	BigInt operator*(const BigInt&);
-	int operator[](int);
+	int operator[](int) const;
+	int& operator[](int);
 	BigInt operator+(const BigInt&) const;
 	string operator+(const string&) const;
 	string to_string  () const;

@@ -59,6 +59,7 @@ int main ()
         int result_1 = num_C[1];
         int result_2 = num_C[2];
         int result_3 = num_C[3];
+		std::cout << num_C.to_string() << std::endl;
 
         // Verify
         assert(result_0           ==  6 );
