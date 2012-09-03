@@ -4,7 +4,7 @@
  */
 
 //===========================================================================
-#include "bigInt.h"
+#include "bigint.h"
 
 #include <iostream>
 #include <string>

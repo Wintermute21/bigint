@@ -4,7 +4,7 @@
  */
 
 //===========================================================================
-#include "bigInt.h"
+#include "bigint.h"
 
 #include <iostream>
 #include <string>
@@ -43,7 +43,8 @@ int main ()
 
         // Test
         arb.times_10(PWR_B);
-
+		std::cout << arb.to_string() << std::endl;
+		std::cout << RESULT_B << std::endl;
         // Verfiy
         assert(arb.to_string() == RESULT_B);
     }
