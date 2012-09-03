@@ -112,7 +112,7 @@ int BigInt::operator[](int idx) const
 }
 
 int& BigInt::operator[](int idx) {
-return digits[idx];
+return digits[digits.size()-1-idx];
 }
 
 istream& operator>>(istream& in, BigInt& num)
