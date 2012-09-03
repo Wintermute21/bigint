@@ -106,7 +106,7 @@ BigInt BigInt::operator+(const BigInt& tmp) const {
 	return BigInt(result);
 }
 
-int BigInt::operator[](const int idx)
+int BigInt::operator[](int idx)
 {
     return digits[idx];
 }
@@ -234,7 +234,6 @@ BigInt BigInt::operator++(int) {
 	
 }
 
-int BigInt::size (int) {
-int result = init(*this);
-return result;
+int BigInt::size () {
+return digits.size();
 }

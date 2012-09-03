@@ -27,7 +27,7 @@ public:
 	BigInt times_10(int);
 	void times_single_digit(const int);
 	BigInt operator*(const BigInt&);
-	int operator[](const int);
+	int operator[](int);
 	BigInt operator+(const BigInt&) const;
 	string operator+(const string&) const;
 	string to_string  () const;
@@ -35,7 +35,7 @@ public:
 	friend istream& operator>>(istream&, BigInt&);
 	BigInt& operator*=(BigInt&);
 	BigInt& operator=(const BigInt&);
-	int size(int);
+	int size();
 private:
 	vector<int> digits;
 	void zero ();
